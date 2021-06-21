@@ -58,6 +58,17 @@ This script generates plots for all of the hallway trials within `results/figs/h
 
 * `train_motion_classifier.py`: Trains a three-class motion classifier (walk vs. run vs. stairs) using a subset of the training data, and will reproduce the accuracy of the classifier for the validation set.
 
+# Run instructions
+```
+$ # Activate any of the python environment
+$ git clone https://github.com/ShivamPR21/pyshoe.git # updated version of pyshoe for minor issues.
+$ git clone https://github.com/ShivamPR21/liegroups.git
+$ cd liegroups
+$ pip install -e .
+$ cd ../pyshoe
+$ # run whatever you want
+```
+
 # Citation
 If you use this code in your research, please cite:
 ```
