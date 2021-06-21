@@ -4,7 +4,7 @@ import ins_tools.LSTM as lstm #remove if there is no pytorch installation
 import ins_tools.SVM as SVM #remove if there is no sci-kit-learn installation
 from ins_tools.util import *
 from ins_tools.geometry_helpers import quat2mat, mat2quat, euler2quat, quat2euler
-from sklearn.externals import joblib
+import joblib
 import sys
 sys.path.append('../')
 
