@@ -1,6 +1,6 @@
 import numpy as np
 import ins_tools.SVM as svm
-from sklearn.externals import joblib #Used for saving the model
+import joblib #Used for saving the model
 import sys
 sys.path.append('../')
 
@@ -30,10 +30,10 @@ walk_train, walk_test  = svm.importdata(walk_dirs,crop=300, samples_per_file=sam
 run_train, run_test = svm.importdata(run_dirs,crop=300, samples_per_file=samples_per_file, seq_len=sample_duration)
 stair_train, stair_test = svm.importdata(stair_dirs, crop=300, samples_per_file=samples_per_file, seq_len=sample_duration)
 
-#clf = svm.traindata(0.001, walk_train, run_train, stair_train)
-#joblib.dump(clf, 'results/3class_vn100_2.pkl', compress=1)
+clf = svm.traindata(0.001, walk_train, run_train, stair_train)
+joblib.dump(clf, 'results/3class_vn100_2.pkl', compress=1)
 #print("testing accuracy")
-clf = joblib.load('results/3class_vn100_2.pkl')
+#  clf = joblib.load('results/3class_vn100_2.pkl')
 
 motionlist = [walk_test, run_test, stair_test]
 c=0

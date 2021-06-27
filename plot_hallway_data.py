@@ -18,7 +18,7 @@ thresh_list =  [0.55, 8.5e7, [1e7, 35e7,1e7], 0] #zero-velocity thresholds for v
 W_list = [5, 5, 5, 0]   #window size used for classical detectors (LSTM requires no window size)
 legend = ['ARED', 'SHOE', 'Adaptive', 'LSTM', 'Ground Truth'] #used for plotting results.
 
-load_traj=True  #set to false to recompute the trajectories, or true to reload the previously saves trajectories (much faster to reload)
+load_traj=False  #set to false to recompute the trajectories, or true to reload the previously saves trajectories (much faster to reload)
 if load_traj==True:
     stored_trajectories = sio.loadmat("results/stored_hallway_trajectories.mat")
 for f in sorted(glob.glob('{}*/*/*/*.mat'.format(source_dir))):
